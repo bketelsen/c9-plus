@@ -25,7 +25,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted unive
 # ------------------------------------------------------------------------------
 # Install common packages
 RUN apt-get update \
-	&& apt-get install -y --force-yes vim htop sqlite3 \
+	&& apt-get install -y --force-yes vim htop sqlite3 tmux mongodb \
 	&& apt-get install -y build-essential g++ curl libssl-dev apache2-utils git libxml2-dev sshfs
 
 # ------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh
 	&& npm install -g nrm --registry=https://registry.npm.taobao.org \
 	&& nrm use taobao \
 
-	&& npm install -g vue-cli babel-cli hexo-cli
+	&& npm install -g vue-cli babel-cli hexo-cli forever pm2 supervisor
 
 # ------------------------------------------------------------------------------
 # .bashrc not loaded by container
