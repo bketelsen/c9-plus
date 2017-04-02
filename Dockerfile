@@ -66,7 +66,7 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh
 	&& npm install -g nrm --registry=https://registry.npm.taobao.org \
 	&& nrm use taobao \
 
-	&& npm install -g vue-cli babel-cli hexo-cli forever pm2 supervisor egg-init
+	&& npm install -g vue-cli babel-cli forever pm2 supervisor egg-init
 
 # ------------------------------------------------------------------------------
 # Install Cloud9
