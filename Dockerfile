@@ -38,7 +38,8 @@ RUN apt-get update \
 # ------------------------------------------------------------------------------
 # Install Composer & Laravel Installer
 ADD composer.phar /usr/local/bin/composer
-RUN composer config -g repo.packagist composer https://packagist.phpcomposer.com \
+RUN chmod a+x /usr/local/bin/composer \
+    && composer config -g repo.packagist composer https://packagist.phpcomposer.com \
 	&& composer self-update \
 	&& echo "PATH=$PATH:$HOME/.composer/vendor/bin" >> ~/.bash_profile
 
