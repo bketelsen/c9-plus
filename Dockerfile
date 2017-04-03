@@ -32,7 +32,7 @@ RUN apt-get update \
 	&& echo ' \n\
 	xdebug.remote_enable=1 \n\
 	' >> /etc/php/7.1/cli/conf.d/20-xdebug.ini \
-	&& apt-get install -y --force-yes vim htop sqlite3 tmux mongodb \
+	&& apt-get install -y --force-yes nodejs vim htop sqlite3 tmux mongodb \
 	&& apt-get install -y build-essential g++ curl libssl-dev apache2-utils git libxml2-dev sshfs
 
 # ------------------------------------------------------------------------------
