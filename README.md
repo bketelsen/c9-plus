@@ -31,5 +31,5 @@ docker run --rm -p 8080:80 -v "$PWD:/workspace/" vipzhicheng/c9-plus
 PS: I always make an alias to ~/.bashrc
 
 ```
-alias edit='docker run --rm -p 8080:80 -v "$PWD:/workspace/" vipzhicheng/c9-plus'
+alias edit='alias edit='docker ps -a -q -f name=^/c9$ | xargs docker stop || true && docker run --rm --name c9 -p 3000:3000 -p 8888:80 -p 8080:8080 -p 8000:8000 -v "$PWD:/workspace/" vipzhicheng/c9-plus'
 ```
